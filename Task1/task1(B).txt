@@ -1,0 +1,29 @@
+Button Factory
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int P,Q,R,S;
+    cin>>P>>Q>>R>>S;
+    int start,end;
+    start= P<R ? R : P;
+    end =  Q<S ? Q : S;
+    if(Q>=R && S>=P)
+         cout<<end-start;
+    else
+        cout<<0;
+    return 0;
+}
+
+Explanation : 
+first read P,Q,R,S 
+then created two variable start & end
+then compare p & R whichever is larger assign it to start
+then compare Q & S whichever is small assign it to end
+then check one condition(if(Q>=R && S>=P)) if this true then print end - start else print 0
