@@ -1,0 +1,30 @@
+Lazy Lad
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int q;
+    cin>>q;
+    while(q--)
+    {
+        int n;
+        cin>>n;
+        int sum=0,i=1,row=0;
+        while(sum<n)
+        {
+            sum+=i;
+            row++;
+            i++;
+        }
+        if(sum==n)
+        cout<<row<<endl;
+        else
+        cout<<row-1<<endl;
+    }
+    return 0;
+}
