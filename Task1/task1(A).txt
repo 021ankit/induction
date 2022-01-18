@@ -1,0 +1,43 @@
+Toffee Problem
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() { 
+    int n, m;
+    cin>>n>>m;
+    vector<int> v;
+    for(int i=0; i<n; i++)
+    {
+        int no;
+        cin>>no;
+        v.push_back(no);
+    }
+    sort(v.begin(),v.end());
+    int count=0,sum=0;
+    for(int i=0; i<n; i++)
+    {
+        sum+=v[i];
+        if(sum<=m)
+        {    
+        count++;
+        }
+        else
+            break;
+    }
+    cout<<count;
+    return 0;
+}
+
+
+Explanation :
+first read value of n & m then store the price of n toffes in vector
+then sort the vector
+then i have create a sum variable
+inside a for loop each time sum=sum+v[i] till sum<=m and also use count variable for counting
+then print the count variable
